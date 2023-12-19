@@ -1,2 +1,4 @@
 # Shopping-List-App
-Create a grocery list based on meal prep selections. Simply by clicking "add ingredients", you can generate a shopping list of all the necessary ingredients.
+When meal prepping, one of the most important tasks we must do is build a shopping list. This will take the guess work out of figuring out what ingredients need to be added to our shopping list. 
+This application has two sections. 
+1. Our list of recipes, 
