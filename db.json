@@ -1,0 +1,65 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "meal": "Peanut Butter and Jelly Sandwich",
+            "ingredients": [
+                {
+                "item-1": "Peanut Butter",
+                "item-2": "Grape Jelly",
+                "item-3": "Bread"
+                }
+            ]   
+        },
+        {
+            "id": 2,
+            "meal": "Bacon, Egg, and Cheese",
+            "ingredients": [
+                {
+                "item-1": "Turkey Bacon",
+                "item-2": "Eggs",
+                "item-3": "Sliced Cheese",
+                "item-4": "Butter Rolls"
+            }
+            ]   
+        },
+        {
+            "id": 3,
+            "meal": "Chicken Parm",
+            "ingredients": [
+                {
+                "item-1": "Chicken Breast",
+                "item-2": "Mozzarella Cheese",
+                "item-3": "Bread Crumbs",
+                "item-4": "Flour",
+                "item-5": "Spaghetti Sauce"
+                }
+            ]   
+        },
+        {
+            "id": 4,
+            "meal": "California Rolls",
+            "ingredients": [
+                {
+                "item-1": "Rice",
+                "item-2": "Sea Weed",
+                "item-3": "Imitation Crab",
+                "item-4": "Nori",
+                "item-5": "Cucumber",
+                "item-6": "Avocado"
+                }
+            ]   
+        },
+        {
+            "id": 5,
+            "meal": "Spaghetti and Meatballs",
+            "ingredients": [
+                {
+                "item-1": "Pasta",
+                "item-2": "Grape Jelly",
+                "item-3": "Bread"
+                }
+            ]   
+        }
+    ]
+}
