@@ -1,4 +1,5 @@
 # Shopping-List-App
 When meal prepping, one of the most important tasks we must do is build a shopping list. This will take the guess work out of figuring out what ingredients need to be added to our shopping list. 
 This application has two sections. 
-1. Our list of recipes, 
+1. Our list of recipes, which will display preset meals. It will also have a section that will will allow users to add new meals and ingredients to the server for later access. Each meal will also have the option to be delete that meal and the ingredients from the server. They will also have an "Add to Shopping List" button that will add all ingredients associated with this meal to the shopping list section.
+2. Our list of ingredients, which will display all the items necessary for purchase. Each item will have a delete button to remove unnecessary items from the list. The list itself will also have a "Add Item" button that can be used to add miscellaneous items to pick up while shopping. It will also have a "Clear All" button to delete all the items from the shopping list so you can start with a clean slate. 
