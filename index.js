@@ -37,8 +37,49 @@ moreIngredients.addEventListener('click', (e) => {
 
     ingredientsEntry.appendChild(newEntry)
     ingredientsEntry.appendChild(newLine)
+});
 
-})
+
+//Load Shopping List Items
+function loadShopList(){
+    fetch('http://localhost:3000/shopping-list')
+        .then(res => res.json())
+        .then((data) => {
+            data.forEach((buyMe) => renderShopList(buyMe))
+        })
+}
+
+function renderShopList(buyMe){
+    const groceryList = document.querySelector("#grocery-list");
+    const newItem = document.createElement('li');
+
+    newItem.className = "item";
+    newItem.innerHTML = `
+    <div style="display: flex">
+        <p style="margin-right: 10px">${buyMe.item}</p>
+        <button class="delete-button" style="font-size: 14px; padding-top: -4px">Delete</button>
+    </div>
+    `
+    groceryList.appendChild(newItem);   
+}
+
+
+//------------------------------------------------------------------
+//Add Misc. Items to Shopping List
+addItemButton = document.querySelector('#submit-item')
+
+addItemButton.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const groceryList = document.querySelector('#grocery-list')
+    const newItemInput = document.querySelector('input[name="item"]');
+    newItemText = newItemInput.value;
+
+    // let newIngredient = document.createElement('li'),
+    // newIngredient.textContent = newItemText;
+    // groceryList.appendChild(newItem);
+    // newItemInput.value ='';  
+});
+
 
 // let addButton = newRecipe.querySelector('.add-button');
 // addButton.addEventListener('click', addIngredients);
@@ -58,3 +99,4 @@ moreIngredients.addEventListener('click', (e) => {
 
 //Initialize
 loadRecipes()
+loadShopList()

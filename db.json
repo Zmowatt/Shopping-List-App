@@ -65,11 +65,11 @@
     "shopping-list": [
         {
          "id": 1,
-         "item-1": "Rice"   
+         "item": "Rice"   
         },        
         {
         "id": 2,
-        "item-1": "Eggs"   
+        "item": "Eggs"   
         }
     ]
 

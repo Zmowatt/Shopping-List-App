@@ -3,3 +3,7 @@ h1 {
     color: blue;
     background-color:gray;
 }
+
+.shopping-list {
+    border: 1px;
+}
