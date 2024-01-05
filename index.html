@@ -5,9 +5,8 @@
     <title>My Shopping List</title>
     <link rel="stylesheet" href="./index.css">
 </head>
-<body>
-    <span>
-    <div id="recipes">
+<body style="display: flex; ">
+    <div id="recipes" style="width:50%">
         <h1><strong>MY COOK BOOK</strong></h1>
         <h2>My Favorite Recipes</h2>
         <div>
@@ -37,19 +36,16 @@
 
         </div>
     </div>
-</span>
-    <span>
-    <div id="shopping-list">
+    <div id="shopping-list" style="width:50%">
         <h1>My Shopping List</h1>
         <div id ="new-item-entry">
             <label for="new-items">Add Misc. Items</label>
-            <input type="text" placeholder="Input Item">
+            <input id="pickMeUp" type="text" name="item" placeholder="Input Item">
             <button type="submit" id="submit-item">Add</button>
         </div>
         <ul id="grocery-list">
         </ul>
     </div>
-    </span>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
