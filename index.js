@@ -65,13 +65,19 @@ function renderShopList(buyMe){
     let deleteButton = newItem.querySelector('.delete-button');
     deleteButton.addEventListener('mouseover', (event) => {
         event.target.style.backgroundColor = 'red';
-    })
+    });
     deleteButton.addEventListener('mouseout', (event) => {
         event.target.style.backgroundColor = '';
+    }); 
+   //  deleteButton.addEventListener('click', deleteItem);
+
+    deleteButton.addEventListener('click', () => {
+        newItem.remove();
     })
-    deleteButton.addEventListener('click', deleteItem)
+
     groceryList.appendChild(newItem);   
-}
+
+}   
 
 function deleteItem(item){
     fetch('http://localhost:3000/shopping-list')
@@ -81,28 +87,44 @@ function deleteItem(item){
 //Add Misc. Items to Shopping List
 addItemButton = document.querySelector('#submit-item')
 
-addItemButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const groceryList = document.querySelector('#grocery-list')
-    const newItemInput = document.querySelector('#pickMeUp');
-    newItemText = newItemInput.value;
+addItemButton.addEventListener('click', addItem);
 
+//Add to List
+function addItem(e){
+    e.preventDefault();
+    let newItemObj = {item: document.getElementById('pickMeUp').value}
+    console.log(newItemObj);
+    postItem(newItemObj);
+    addToList(newItemObj);
+}
+
+
+function addToList(item){
+    const groceryList = document.querySelector('#grocery-list');
     let newIngredient = document.createElement('li');
     newIngredient.innerHTML = `
         <div style="display: flex">
-            <p style="margin-right: 10px; font-size: 14px">${newItemText}</p>
+            <p style="margin-right: 10px; font-size: 14px">${item.item}</p>
             <button id="delete-item" style="font-size: 12px; padding: 6px 10px">Delete</button>
         </div>
         `
     groceryList.appendChild(newIngredient);
-    newItemInput.value ='';  
+    item.value ='';  
+}
 
-    let deleteItem = newIngredient.querySelector('#delete-item')
-    deleteItem.addEventListener('click', () => {
-        newIngredient.remove();
-    })
+//Add Item to the server
+function postItem(item){
+    fetch('http://localhost:3000/shopping-list', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(item)
+      })
+      .then(res => res.json())
+      .then((newItem) => console.log(newItem))
+}
 
-});
 
 //Delete Items
 function deleteMe(){
