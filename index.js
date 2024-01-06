@@ -77,7 +77,7 @@ function deleteItem(item){
     fetch('http://localhost:3000/shopping-list')
 
 }
-//------------------------------------------------------------------
+
 //Add Misc. Items to Shopping List
 addItemButton = document.querySelector('#submit-item')
 
@@ -88,12 +88,28 @@ addItemButton.addEventListener('click', (e) => {
     newItemText = newItemInput.value;
 
     let newIngredient = document.createElement('li');
-    newIngredient.textContent = newItemText;
+    newIngredient.innerHTML = `
+        <div style="display: flex">
+            <p style="margin-right: 10px; font-size: 14px">${newItemText}</p>
+            <button id="delete-item" style="font-size: 12px; padding: 6px 10px">Delete</button>
+        </div>
+        `
     groceryList.appendChild(newIngredient);
     newItemInput.value ='';  
+
+    let deleteItem = newIngredient.querySelector('#delete-item')
+    deleteItem.addEventListener('click', () => {
+        newIngredient.remove();
+    })
+
 });
 
+//Delete Items
+function deleteMe(){
 
+}
+
+// ---------------------------------------------------------------------------
 // let addButton = newRecipe.querySelector('.add-button');
 // addButton.addEventListener('click', addIngredients);
 
