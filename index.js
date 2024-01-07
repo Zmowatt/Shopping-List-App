@@ -69,18 +69,25 @@ function renderShopList(buyMe){
     deleteButton.addEventListener('mouseout', (event) => {
         event.target.style.backgroundColor = '';
     }); 
-   //  deleteButton.addEventListener('click', deleteItem);
+    deleteButton.addEventListener('click', deleteItem);
 
     deleteButton.addEventListener('click', () => {
         newItem.remove();
+        deleteItem(buyMe.id)
     })
 
     groceryList.appendChild(newItem);   
 
 }   
 
-function deleteItem(item){
-    fetch('http://localhost:3000/shopping-list')
+//Delete Items from server
+function deleteItem(id){
+    fetch(`http://localhost:3000/shopping-list/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+    })
 
 }
 
@@ -110,6 +117,12 @@ function addToList(item){
         `
     groceryList.appendChild(newIngredient);
     item.value ='';  
+
+    let deleteButton = newIngredient.querySelector('#delete-item');
+    deleteButton.addEventListener('click', () => {
+        newIngredient.remove();
+        deleteItem(item.id)
+    })
 }
 
 //Add Item to the server

@@ -72,16 +72,16 @@
       "item": "Eggs"
     },
     {
-      "isTrusted": true,
-      "id": 3
-    },
-    {
-      "item": "Milk",
-      "id": 4
-    },
-    {
       "item": "Noodles",
       "id": 5
+    },
+    {
+      "item": "Cheese",
+      "id": 6
+    },
+    {
+      "item": "Water",
+      "id": 7
     }
   ]
 }

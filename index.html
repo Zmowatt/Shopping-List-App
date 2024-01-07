@@ -19,30 +19,32 @@
                 <label for="new-recipe">New Recipe</label><br>
                 <input type="text" placeholder="Milkshake">
             </div>
-            <div>
-                <label for="ingredient">Add Ingredients</label><br>
-                <div id="ingredients-entry">
-                    <input type="text" placeholder="Ingredient"><br>
-                    <input type="text" placeholder="Ingredient"><br>
-                    <input type="text" placeholder="Ingredient"><br>
-                    <input type="text" placeholder="Ingredient"><br>
-                    <input type="text" placeholder="Ingredient"><br>
+            <form id="new-recipe-form">
+                <div>
+                    <label for="ingredient">Add Ingredients</label><br>
+                    <div id="ingredients-entry">
+                        <input type="text" placeholder="Ingredient"><br>
+                        <input type="text" placeholder="Ingredient"><br>
+                        <input type="text" placeholder="Ingredient"><br>
+                        <input type="text" placeholder="Ingredient"><br>
+                        <input type="text" placeholder="Ingredient"><br>
+                    </div>
+                    <button id="more-ingredients">Click to Add More Ingredients</button>
                 </div>
-                <button id="more-ingredients">Click to Add More Ingredients</button>
-            </div>
+            </form>
             <button type="submit">Add to Cook Book</button>
             <button type="submit">Add to Cook Book and Shopping List</button>
-                
-
         </div>
     </div>
     <div id="shopping-list" style="width:50%">
         <h1>My Shopping List</h1>
-        <div id ="new-item-entry">
-            <label for="new-items">Add Misc. Items</label>
-            <input id="pickMeUp" type="text" name="item" placeholder="Input Item">
-            <button type="submit" id="submit-item">Add</button>
-        </div>
+        <form id="new-item-form">
+            <div id ="new-item-entry">
+                <label for="new-items">Add Misc. Items</label>
+                <input id="pickMeUp" type="text" name="item" placeholder="Input Item">
+                <button type="submit" id="submit-item">Add</button>
+            </div>
+        </form>
         <ul id="grocery-list">
         </ul>
     </div>
