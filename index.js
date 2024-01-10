@@ -33,17 +33,19 @@ function renderRecipe(recipe){
 //Add more ingredient entry options
 const ingredientsEntry = document.querySelector('#ingredients-entry');
 const moreIngredients = document.querySelector('#more-ingredients');
-
+let i=6;
 moreIngredients.addEventListener('click', (e) => {
     e.preventDefault();
     const newEntry = document.createElement('input');
     const newLine = document.createElement('br');
     
-    newEntry.type = "text"
-    newEntry.placeholder = "Ingredient"
+    newEntry.type = "text";
+    newEntry.id = i;
+    newEntry.placeholder = "Ingredient";
 
     ingredientsEntry.appendChild(newEntry)
     ingredientsEntry.appendChild(newLine)
+    i += 1;
 });
 
 //Add recipe ingredients to the shopping list
@@ -67,6 +69,24 @@ addRecipeButton.addEventListener('click', addRecipe)
 
 function addRecipe(e){
     e.preventDefault();
+    let newIngredientsObj ={}
+
+    let inputs = document.querySelectorAll('#ingredients-entry input[type="text"]')
+    inputs.forEach((input) => {
+        let inputId = input.id.toString();
+        let inputValue = input.value;
+        
+        let ingredientObj = {['item-' + inputId]: inputValue};
+        
+        Object.assign(newIngredientsObj, ingredientObj)    
+    })
+
+
+    let newRecipeObj = {
+        meal: document.querySelector('#new-recipe').value,
+        ingredients: newIngredientsObj
+    }
+    console.log(newRecipeObj)
 }
 
 
