@@ -51,26 +51,23 @@ moreIngredients.addEventListener('click', (e) => {
 function moveToShopList(ingredients){
     ingredients.forEach(allIngredients => {
         Object.values(allIngredients).forEach(ingredient =>{
-            const groceryList = document.querySelector('#grocery-list');
-            let newItem= document.createElement('li');
-            newItem.innerHTML = `
-                <div style="display: flex">
-                    <p style="margin-right: 10px; font-size: 14px">${ingredient}</p>
-                    <button id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
-                </div>
-                `
-            groceryList.appendChild(newItem);
-
-            let deleteButton = newItem.querySelector('#delete-item');
-            deleteButton.addEventListener('click', () => {
-                newItem.remove();
-                deleteItem(item.id)
-            })
+            let newItemObj = {item: ingredient}
+            console.log(newItemObj);
+            postItem(newItemObj);
+            addToList(newItemObj);
     })
 })
 }
 
+//Add New Recipe
+let newRecipeForm = document.querySelector('#new-recipe-form')
 
+const addRecipeButton = document.querySelector('#add-recipe-button')
+addRecipeButton.addEventListener('click', addRecipe)
+
+function addRecipe(e){
+    e.preventDefault();
+}
 
 
 //---------------SHOPPING LIST SECTION------------------------------------
