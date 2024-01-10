@@ -1,3 +1,5 @@
+//----------------------COOK BOOK SECTION----------------------------
+
 //Load all the recipes on into the cookbook section
 function loadRecipes(){
     fetch('http://localhost:3000/recipes')
@@ -21,6 +23,11 @@ function renderRecipe(recipe){
     </div>
     `
     cookBook.appendChild(newRecipe);   
+
+    let addButton = newRecipe.querySelector('.add-button')
+    addButton.addEventListener('click', () => {
+        moveToShopList(recipe.ingredients)
+    })
 } 
 
 //Add more ingredient entry options
@@ -39,6 +46,34 @@ moreIngredients.addEventListener('click', (e) => {
     ingredientsEntry.appendChild(newLine)
 });
 
+//Add recipe ingredients to the shopping list
+
+function moveToShopList(ingredients){
+    ingredients.forEach(allIngredients => {
+        Object.values(allIngredients).forEach(ingredient =>{
+            const groceryList = document.querySelector('#grocery-list');
+            let newItem= document.createElement('li');
+            newItem.innerHTML = `
+                <div style="display: flex">
+                    <p style="margin-right: 10px; font-size: 14px">${ingredient}</p>
+                    <button id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
+                </div>
+                `
+            groceryList.appendChild(newItem);
+
+            let deleteButton = newItem.querySelector('#delete-item');
+            deleteButton.addEventListener('click', () => {
+                newItem.remove();
+                deleteItem(item.id)
+            })
+    })
+})
+}
+
+
+
+
+//---------------SHOPPING LIST SECTION------------------------------------
 
 //Load Shopping List Items
 function loadShopList(){
@@ -112,7 +147,7 @@ function addToList(item){
     newIngredient.innerHTML = `
         <div style="display: flex">
             <p style="margin-right: 10px; font-size: 14px">${item.item}</p>
-            <button id="delete-item" style="font-size: 12px; padding: 6px 10px">Delete</button>
+            <button id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
         </div>
         `
     groceryList.appendChild(newIngredient);
@@ -139,10 +174,6 @@ function postItem(item){
 }
 
 
-//Delete Items
-function deleteMe(){
-
-}
 
 // ---------------------------------------------------------------------------
 // let addButton = newRecipe.querySelector('.add-button');
