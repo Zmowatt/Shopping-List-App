@@ -73,12 +73,14 @@ function addRecipe(e){
 
     let inputs = document.querySelectorAll('#ingredients-entry input[type="text"]')
     inputs.forEach((input) => {
-        let inputId = input.id.toString();
-        let inputValue = input.value;
-        
-        let ingredientObj = {['item-' + inputId]: inputValue};
-        
-        Object.assign(newIngredientsObj, ingredientObj)    
+        if(input.value !== ''){
+            let inputId = input.id.toString();
+            let inputValue = input.value;
+            
+            let ingredientObj = {['item-' + inputId]: inputValue};
+            
+            Object.assign(newIngredientsObj, ingredientObj)    
+        }
     })
 
 
@@ -87,6 +89,7 @@ function addRecipe(e){
         ingredients: newIngredientsObj
     }
     console.log(newRecipeObj)
+
 }
 
 
