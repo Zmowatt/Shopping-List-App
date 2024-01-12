@@ -28,6 +28,12 @@ function renderRecipe(recipe){
     addButton.addEventListener('click', () => {
         moveToShopList(recipe.ingredients)
     })
+
+    let deleteButton = newRecipe.querySelector('.delete-button')
+    deleteButton.addEventListener('click', () =>{
+        newRecipe.remove();
+        deleteRecipe(recipe.id)
+    })
 } 
 
 //Add more ingredient entry options
@@ -50,13 +56,15 @@ moreIngredients.addEventListener('click', (e) => {
 
 //Add recipe ingredients to the shopping list
 
-function moveToShopList(ingredients){
-        Object.keys(ingredients).forEach(key =>{
-            let newItemObj = {item: ingredients[key]};
+function moveToShopList(allIngredients){
+    allIngredients.forEach(ingredient => {
+        Object.keys(ingredient).forEach(key =>{
+            let newItemObj = {item: ingredient[key]};
             console.log(newItemObj);
             postItem(newItemObj);
             addToList(newItemObj);
-})
+        })
+    })
 }
 
 //Add New Recipe
@@ -91,6 +99,7 @@ function addRecipe(e){
     postRecipe(newRecipeObj)
 }
 
+//Post recipe to server
 function postRecipe(recipe){
     fetch('http://localhost:3000/recipes', {
         method: 'POST',
@@ -101,6 +110,17 @@ function postRecipe(recipe){
       })
       .then(res => res.json())
       .then((newRecipe) => console.log(newRecipe))
+}
+
+//Delete recipe from server
+function deleteRecipe(id){
+    fetch(`http://localhost:3000/recipes/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+    })
+
 }
 
 
@@ -203,7 +223,6 @@ function postItem(item){
       .then(res => res.json())
       .then((newItem) => console.log(newItem))
 }
-
 
 
 // ---------------------------------------------------------------------------

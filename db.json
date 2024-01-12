@@ -62,13 +62,20 @@
       ]
     },
     {
-      "meal": "Milk Shake",
+      "meal": "Milkshake",
       "ingredients": {
         "item-1": "Milk",
-        "item-2": "IceCream",
-        "item-3": "Vanilla"
+        "item-2": "Shake"
       },
       "id": 6
+    },
+    {
+      "meal": "Milkshake",
+      "ingredients": {
+        "item-1": "Milk",
+        "item-2": "Shake"
+      },
+      "id": 7
     }
   ],
   "shopping-list": [
@@ -81,15 +88,15 @@
       "item": "Eggs"
     },
     {
-      "item": "Milk",
+      "item": "Peanut Butter",
       "id": 3
     },
     {
-      "item": "IceCream",
+      "item": "Grape Jelly",
       "id": 4
     },
     {
-      "item": "Vanilla",
+      "item": "Bread",
       "id": 5
     }
   ]
