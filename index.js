@@ -51,13 +51,11 @@ moreIngredients.addEventListener('click', (e) => {
 //Add recipe ingredients to the shopping list
 
 function moveToShopList(ingredients){
-    ingredients.forEach(allIngredients => {
-        Object.values(allIngredients).forEach(ingredient =>{
-            let newItemObj = {item: ingredient}
+        Object.keys(ingredients).forEach(key =>{
+            let newItemObj = {item: ingredients[key]};
             console.log(newItemObj);
             postItem(newItemObj);
             addToList(newItemObj);
-    })
 })
 }
 
@@ -89,7 +87,7 @@ function addRecipe(e){
         ingredients: newIngredientsObj
     }
     console.log(newRecipeObj)
-
+    renderRecipe(newRecipeObj)
 }
 
 

@@ -78,6 +78,26 @@
     {
       "item": "Water",
       "id": 7
+    },
+    {
+      "item": "Bread",
+      "id": 8
+    },
+    {
+      "item": "Peanut Butter",
+      "id": 9
+    },
+    {
+      "item": "Grape Jelly",
+      "id": 10
+    },
+    {
+      "item": "Milk",
+      "id": 11
+    },
+    {
+      "item": "Shake",
+      "id": 12
     }
   ]
 }
