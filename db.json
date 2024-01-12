@@ -60,6 +60,15 @@
           "item-3": "Bread"
         }
       ]
+    },
+    {
+      "meal": "Milk Shake",
+      "ingredients": {
+        "item-1": "Milk",
+        "item-2": "IceCream",
+        "item-3": "Vanilla"
+      },
+      "id": 6
     }
   ],
   "shopping-list": [
@@ -72,32 +81,16 @@
       "item": "Eggs"
     },
     {
-      "item": "Noodles",
-      "id": 5
-    },
-    {
-      "item": "Water",
-      "id": 7
-    },
-    {
-      "item": "Bread",
-      "id": 8
-    },
-    {
-      "item": "Peanut Butter",
-      "id": 9
-    },
-    {
-      "item": "Grape Jelly",
-      "id": 10
-    },
-    {
       "item": "Milk",
-      "id": 11
+      "id": 3
     },
     {
-      "item": "Shake",
-      "id": 12
+      "item": "IceCream",
+      "id": 4
+    },
+    {
+      "item": "Vanilla",
+      "id": 5
     }
   ]
 }

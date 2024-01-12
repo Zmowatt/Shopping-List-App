@@ -88,6 +88,19 @@ function addRecipe(e){
     }
     console.log(newRecipeObj)
     renderRecipe(newRecipeObj)
+    postRecipe(newRecipeObj)
+}
+
+function postRecipe(recipe){
+    fetch('http://localhost:3000/recipes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(recipe)
+      })
+      .then(res => res.json())
+      .then((newRecipe) => console.log(newRecipe))
 }
 
 
