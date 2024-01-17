@@ -3,63 +3,53 @@
     {
       "id": 1,
       "meal": "Peanut Butter and Jelly Sandwich",
-      "ingredients": [
-        {
-          "item-1": "Peanut Butter",
-          "item-2": "Grape Jelly",
-          "item-3": "Bread"
-        }
-      ]
+      "ingredients": {
+        "item-1": "Peanut Butter",
+        "item-2": "Grape Jelly",
+        "item-3": "Bread"
+      }
     },
     {
       "id": 2,
       "meal": "Bacon, Egg, and Cheese",
-      "ingredients": [
-        {
-          "item-1": "Turkey Bacon",
-          "item-2": "Eggs",
-          "item-3": "Sliced Cheese",
-          "item-4": "Butter Rolls"
-        }
-      ]
+      "ingredients": {
+        "item-1": "Turkey Bacon",
+        "item-2": "Eggs",
+        "item-3": "Sliced Cheese",
+        "item-4": "Butter Rolls"
+      }
     },
     {
       "id": 3,
       "meal": "Chicken Parm",
-      "ingredients": [
-        {
-          "item-1": "Chicken Breast",
-          "item-2": "Mozzarella Cheese",
-          "item-3": "Bread Crumbs",
-          "item-4": "Flour",
-          "item-5": "Spaghetti Sauce"
-        }
-      ]
+      "ingredients": {
+        "item-1": "Chicken Breast",
+        "item-2": "Mozzarella Cheese",
+        "item-3": "Bread Crumbs",
+        "item-4": "Flour",
+        "item-5": "Spaghetti Sauce"
+      }
     },
     {
       "id": 4,
       "meal": "California Rolls",
-      "ingredients": [
-        {
-          "item-1": "Rice",
-          "item-2": "Sea Weed",
-          "item-3": "Imitation Crab",
-          "item-4": "Nori",
-          "item-5": "Cucumber",
-          "item-6": "Avocado"
-        }
-      ]
+      "ingredients": {
+        "item-1": "Rice",
+        "item-2": "Sea Weed",
+        "item-3": "Imitation Crab",
+        "item-4": "Nori",
+        "item-5": "Cucumber",
+        "item-6": "Avocado"
+      }
     },
     {
       "id": 5,
       "meal": "Spaghetti and Meatballs",
-      "ingredients": [
-        {
-          "item-1": "Pasta",
-          "item-2": "Grape Jelly",
-          "item-3": "Bread"
-        }
-      ]
+      "ingredients": {
+        "item-1": "Pasta",
+        "item-2": "Grape Jelly",
+        "item-3": "Bread"
+      }
     },
     {
       "meal": "Milkshake",
@@ -70,10 +60,11 @@
       "id": 6
     },
     {
-      "meal": "Milkshake",
+      "meal": "Slushie",
       "ingredients": {
-        "item-1": "Milk",
-        "item-2": "Shake"
+        "item-1": "Ice",
+        "item-2": "Flavor",
+        "item-3": "Sugar"
       },
       "id": 7
     }
@@ -86,22 +77,6 @@
     {
       "id": 2,
       "item": "Eggs"
-    },
-    {
-      "item": "Peanut Butter",
-      "id": 14
-    },
-    {
-      "item": "Grape Jelly",
-      "id": 15
-    },
-    {
-      "item": "Bread",
-      "id": 16
-    },
-    {
-      "item": "Turkey Bacon",
-      "id": 17
     },
     {
       "item": "Eggs",
@@ -146,6 +121,26 @@
     {
       "item": "Bread",
       "id": 28
+    },
+    {
+      "item": "Milk",
+      "id": 29
+    },
+    {
+      "item": "Shake",
+      "id": 30
+    },
+    {
+      "item": "Ice",
+      "id": 31
+    },
+    {
+      "item": "Flavor",
+      "id": 32
+    },
+    {
+      "item": "Sugar",
+      "id": 33
     }
   ]
 }
