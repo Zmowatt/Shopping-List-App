@@ -6,4 +6,12 @@ h1 {
 
 .shopping-list {
     border: 1px;
+};
+
+.delete {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    border: red;
+    background: white;
 }

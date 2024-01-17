@@ -83,9 +83,11 @@ function addRecipe(e){
             let inputId = input.id.toString();
             let inputValue = input.value;
             
-            let ingredientObj = {['item-' + inputId]: inputValue};
+            newIngredientsObj['item-' + inputId] = inputValue;
             
-            Object.assign(newIngredientsObj, ingredientObj)    
+            // newIngredientsObj.push(ingredientObj)
+
+            // Object.assign(newIngredientsObj, ingredientObj)    
         }
     })
 
@@ -144,11 +146,11 @@ function renderShopList(buyMe){
     newItem.innerHTML = `
     <div style="display: flex">
         <p style="margin-right: 10px; font-size: 14px">${buyMe.item}</p>
-        <button class="delete-button" style="font-size: 12px; padding: 6px 10px">Delete</button>
+        <button class="delete">Delete</button>
     </div>
     `
 
-    let deleteButton = newItem.querySelector('.delete-button');
+    let deleteButton = newItem.querySelector('.delete');
     deleteButton.addEventListener('mouseover', (event) => {
         event.target.style.backgroundColor = 'red';
     });
@@ -198,7 +200,7 @@ function addToList(item){
     newIngredient.innerHTML = `
         <div style="display: flex">
             <p style="margin-right: 10px; font-size: 14px">${item.item}</p>
-            <button id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
+            <button class="delete" id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
         </div>
         `
     groceryList.appendChild(newIngredient);

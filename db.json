@@ -89,15 +89,63 @@
     },
     {
       "item": "Peanut Butter",
-      "id": 3
+      "id": 14
     },
     {
       "item": "Grape Jelly",
-      "id": 4
+      "id": 15
     },
     {
       "item": "Bread",
-      "id": 5
+      "id": 16
+    },
+    {
+      "item": "Turkey Bacon",
+      "id": 17
+    },
+    {
+      "item": "Eggs",
+      "id": 18
+    },
+    {
+      "item": "Sliced Cheese",
+      "id": 19
+    },
+    {
+      "item": "Butter Rolls",
+      "id": 20
+    },
+    {
+      "item": "Chicken Breast",
+      "id": 21
+    },
+    {
+      "item": "Mozzarella Cheese",
+      "id": 22
+    },
+    {
+      "item": "Bread Crumbs",
+      "id": 23
+    },
+    {
+      "item": "Flour",
+      "id": 24
+    },
+    {
+      "item": "Spaghetti Sauce",
+      "id": 25
+    },
+    {
+      "item": "Pasta",
+      "id": 26
+    },
+    {
+      "item": "Grape Jelly",
+      "id": 27
+    },
+    {
+      "item": "Bread",
+      "id": 28
     }
   ]
 }
