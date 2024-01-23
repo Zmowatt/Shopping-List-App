@@ -6,6 +6,7 @@ This application is designed to allow users to add ingredients to a shopping lis
 ## Description
 One of the worst things when meal prepping, is getting home from your grocery run, firing up the stove, throwing some stuff on the fire and THEN realizing that you forgot to pick up a few key ingredients at the grocery store, because you never added them to the list. This appilcation is designed to guess work building a shopping list by buidling it for you.
 
+### Cook Book
 
 When meal prepping, one of the most important tasks we must do is build a shopping list. This will take the guess work out of figuring out what ingredients need to be added to our shopping list. 
 
