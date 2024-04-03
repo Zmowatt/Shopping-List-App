@@ -182,11 +182,14 @@ addItemButton.addEventListener('click', addItem);
 //Add to List
 function addItem(e){
     e.preventDefault();
-    let newItemObj = {item: document.getElementById('pickMeUp').value}
-    console.log(newItemObj);
-    postItem(newItemObj);
-    addToList(newItemObj);
-    document.getElementById('pickMeUp').value = '';
+    let pickMeUp = document.getElementById('pickMeUp').value;
+    if(pickMeUp !== ''){
+        let newItemObj = {item: pickMeUp}
+        console.log(newItemObj);
+        postItem(newItemObj);
+        addToList(newItemObj);
+        pickMeUp = '';
+    }
 }
 
 
