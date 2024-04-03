@@ -202,6 +202,12 @@ function addToList(item){
     item.value ='';  
 
     let deleteButton = newIngredient.querySelector('#delete-item');
+    deleteButton.addEventListener('mouseover', (event) => {
+        event.target.style.backgroundColor = 'red';
+    });
+    deleteButton.addEventListener('mouseout', (event) => {
+        event.target.style.backgroundColor = '';
+    }); 
     deleteButton.addEventListener('click', () => {
         newIngredient.remove();
         deleteItem(item.id)
