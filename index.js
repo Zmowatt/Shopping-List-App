@@ -18,6 +18,7 @@ function renderRecipe(recipe){
     newRecipe.innerHTML = `
     <div style="display: flex">
         <p>${recipe.meal}</p>
+        </br>
         <button class="add-button">Add to Shopping List</button>
         <button class="delete-button">Delete Recipe</button>
     </div>
@@ -194,7 +195,7 @@ function addToList(item){
     newIngredient.innerHTML = `
         <div style="display: flex">
             <p style="margin-right: 10px; font-size: 14px">${item.item}</p>
-            <button class="delete" id="delete-item" style="border-radius: 50%; padding: 6px 10px">Delete</button>
+            <button class="delete" id="delete-item">Delete</button>
         </div>
         `
     groceryList.appendChild(newIngredient);
@@ -221,23 +222,17 @@ function postItem(item){
 }
 
 
-// ---------------------------------------------------------------------------
-// let addButton = newRecipe.querySelector('.add-button');
-// addButton.addEventListener('click', addIngredients);
-
-// let deleteButton = newRecipe.querySelector('.delete-button');
-// deleteButton = newRecipe.addEventListener('click', deleteMeal)
-
-// function addIngredients(recipe){
-//     let ingredient = document.createElement('li');
-//     ingredient.innerText  = `${recipe.ingredients}`
-
-//     let groceryList = document.querySelector('#grocery-list')
-
-//     groceryList.appendChild(ingredient);
-
-// }
-
-//Initialize
+// ----------------------------------Initialize----------------------------------
 loadRecipes()
 loadShopList()
+
+
+//-------------------Experimental---------------------------------
+//----Add to shopping list and cook book
+// let doBoth = document.querySelector('#do-both');
+// doBoth.addEventListener('click', bookAndList);
+
+// function bookAndList(){
+//     addRecipe();
+//     moveToShopList();
+// }

@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "meal": "Peanut Butter and Jelly Sandwich",
       "ingredients": {
         "item-1": "Peanut Butter",
@@ -10,7 +10,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "meal": "Bacon, Egg, and Cheese",
       "ingredients": {
         "item-1": "Turkey Bacon",
@@ -20,7 +20,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "meal": "Chicken Parm",
       "ingredients": {
         "item-1": "Chicken Breast",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "meal": "California Rolls",
       "ingredients": {
         "item-1": "Rice",
@@ -43,12 +43,12 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "meal": "Spaghetti and Meatballs",
       "ingredients": {
         "item-1": "Pasta",
-        "item-2": "Grape Jelly",
-        "item-3": "Bread"
+        "item-2": "Ground Turkey",
+        "item-3": "Bread Crumbs"
       }
     },
     {
@@ -57,7 +57,7 @@
         "item-1": "Milk",
         "item-2": "Shake"
       },
-      "id": 6
+      "id": "6"
     },
     {
       "meal": "Slushie",
@@ -66,81 +66,41 @@
         "item-2": "Flavor",
         "item-3": "Sugar"
       },
-      "id": 7
+      "id": "7"
     }
   ],
   "shopping-list": [
     {
-      "id": 1,
+      "id": "1",
       "item": "Rice"
     },
     {
-      "id": 2,
+      "id": "2",
       "item": "Eggs"
     },
     {
-      "item": "Eggs",
-      "id": 18
+      "id": "307f",
+      "item": "Milk"
     },
     {
-      "item": "Sliced Cheese",
-      "id": 19
+      "id": "5911",
+      "item": "Shake"
     },
     {
-      "item": "Butter Rolls",
-      "id": 20
+      "id": "da2c",
+      "item": "Milk"
     },
     {
-      "item": "Chicken Breast",
-      "id": 21
+      "id": "ed51",
+      "item": "Ice"
     },
     {
-      "item": "Mozzarella Cheese",
-      "id": 22
+      "id": "4ae1",
+      "item": "Flavor"
     },
     {
-      "item": "Bread Crumbs",
-      "id": 23
-    },
-    {
-      "item": "Flour",
-      "id": 24
-    },
-    {
-      "item": "Spaghetti Sauce",
-      "id": 25
-    },
-    {
-      "item": "Pasta",
-      "id": 26
-    },
-    {
-      "item": "Grape Jelly",
-      "id": 27
-    },
-    {
-      "item": "Bread",
-      "id": 28
-    },
-    {
-      "item": "Milk",
-      "id": 29
-    },
-    {
-      "item": "Shake",
-      "id": 30
-    },
-    {
-      "item": "Ice",
-      "id": 31
-    },
-    {
-      "item": "Flavor",
-      "id": 32
-    },
-    {
-      "item": "Sugar",
-      "id": 33
+      "id": "0025",
+      "item": "Sugar"
     }
   ]
 }
