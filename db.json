@@ -67,6 +67,14 @@
         "item-3": "Sugar"
       },
       "id": "7"
+    },
+    {
+      "id": "bb5e",
+      "meal": "Mlikshake",
+      "ingredients": {
+        "item-1": "Milk",
+        "item-2": "Shake"
+      }
     }
   ],
   "shopping-list": [
@@ -81,6 +89,26 @@
     {
       "id": "307f",
       "item": "Milk"
+    },
+    {
+      "id": "54f0",
+      "item": "Ice"
+    },
+    {
+      "id": "d92f",
+      "item": "Flavor"
+    },
+    {
+      "id": "f28f",
+      "item": "Sugar"
+    },
+    {
+      "id": "1a77",
+      "item": "Milk"
+    },
+    {
+      "id": "1e30",
+      "item": "Shake"
     }
   ]
 }
