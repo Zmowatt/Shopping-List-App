@@ -186,6 +186,7 @@ function addItem(e){
     console.log(newItemObj);
     postItem(newItemObj);
     addToList(newItemObj);
+    document.getElementById('pickMeUp').value = '';
 }
 
 
