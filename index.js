@@ -84,6 +84,7 @@ function addRecipe(e){
             
             newIngredientsObj['item-' + inputId] = inputValue;
         }
+        input.value = '';
     })
 
 
@@ -94,6 +95,8 @@ function addRecipe(e){
     console.log(newRecipeObj)
     renderRecipe(newRecipeObj)
     postRecipe(newRecipeObj)
+    document.querySelector('#new-recipe').value = '';
+    
 }
 
 //Post recipe to server
@@ -188,9 +191,8 @@ function addItem(e){
         console.log(newItemObj);
         postItem(newItemObj);
         addToList(newItemObj);
-        pickMeUp = '';
     }
-}
+}   
 
 
 function addToList(item){

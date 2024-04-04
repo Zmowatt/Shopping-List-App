@@ -1,7 +1,11 @@
+body {
+    background-color: antiquewhite;
+}
+
 h1 {
     font-size: xx-large;
-    color: blue;
-    background-color:gray;
+    color: rgb(33, 83, 96);
+    background-color:rgb(173, 173, 173);
 }
 
 .shopping-list {

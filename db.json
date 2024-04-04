@@ -1,15 +1,6 @@
 {
   "recipes": [
     {
-      "id": "1",
-      "meal": "Peanut Butter and Jelly Sandwich",
-      "ingredients": {
-        "item-1": "Peanut Butter",
-        "item-2": "Grape Jelly",
-        "item-3": "Bread"
-      }
-    },
-    {
       "id": "2",
       "meal": "Bacon, Egg, and Cheese",
       "ingredients": {
@@ -52,28 +43,12 @@
       }
     },
     {
-      "meal": "Milkshake",
+      "id": "b49b",
+      "meal": "PB&J Sandwiches",
       "ingredients": {
-        "item-1": "Milk",
-        "item-2": "Shake"
-      },
-      "id": "6"
-    },
-    {
-      "meal": "Slushie",
-      "ingredients": {
-        "item-1": "Ice",
-        "item-2": "Flavor",
-        "item-3": "Sugar"
-      },
-      "id": "7"
-    },
-    {
-      "id": "bb5e",
-      "meal": "Mlikshake",
-      "ingredients": {
-        "item-1": "Milk",
-        "item-2": "Shake"
+        "item-1": "Peanut Butter",
+        "item-2": "Grape Jelly",
+        "item-3": "Whole Wheat Bread"
       }
     }
   ],
@@ -91,24 +66,20 @@
       "item": "Milk"
     },
     {
-      "id": "54f0",
-      "item": "Ice"
+      "id": "9176",
+      "item": "Peanut Butter"
     },
     {
-      "id": "d92f",
-      "item": "Flavor"
+      "id": "25b5",
+      "item": "Grape Jelly"
     },
     {
-      "id": "f28f",
-      "item": "Sugar"
+      "id": "f859",
+      "item": "Whole Wheat Bread"
     },
     {
-      "id": "1a77",
+      "id": "aecc",
       "item": "Milk"
-    },
-    {
-      "id": "1e30",
-      "item": "Shake"
     }
   ]
 }
