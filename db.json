@@ -43,12 +43,12 @@
       }
     },
     {
-      "id": "b49b",
-      "meal": "PB&J Sandwiches",
+      "id": "ad17",
+      "meal": "Peanut Butter and Jelly Sandwich",
       "ingredients": {
         "item-1": "Peanut Butter",
-        "item-2": "Grape Jelly",
-        "item-3": "Whole Wheat Bread"
+        "item-2": "Jelly ",
+        "item-3": "Bread"
       }
     }
   ],
@@ -62,23 +62,7 @@
       "item": "Eggs"
     },
     {
-      "id": "307f",
-      "item": "Milk"
-    },
-    {
-      "id": "9176",
-      "item": "Peanut Butter"
-    },
-    {
-      "id": "25b5",
-      "item": "Grape Jelly"
-    },
-    {
-      "id": "f859",
-      "item": "Whole Wheat Bread"
-    },
-    {
-      "id": "aecc",
+      "id": "4c1a",
       "item": "Milk"
     }
   ]

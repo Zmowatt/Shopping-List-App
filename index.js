@@ -8,7 +8,6 @@ function loadRecipes(){
             data.forEach((recipe) => renderRecipe(recipe))
         })
 }
-
 //Render each recipe
 function renderRecipe(recipe){
     const cookBook = document.querySelector("#recipe-list");
@@ -36,7 +35,6 @@ function renderRecipe(recipe){
         deleteRecipe(recipe.id)
     })
 } 
-
 //Add more ingredient entry options
 const ingredientsEntry = document.querySelector('#ingredients-entry');
 const moreIngredients = document.querySelector('#more-ingredients');
@@ -123,6 +121,52 @@ function deleteRecipe(id){
 
 }
 
+//Search for Recipe
+
+const searchButton = document.querySelector("#search-button");
+
+searchButton.addEventListener('click', lookUpRecipe)
+
+function lookUpRecipe(e){
+    e.preventDefault();
+    const userInput = document.querySelector("#search-input").value; //Moved userInput into the lookUpRecipe function, so that when the event is activated, it will pull the value of the search input.
+    fetch('http://localhost:3000/recipes')
+        .then(res => res.json())
+        .then((data) => {
+            const perfectMatch = data.find((recipe) => recipe.meal === userInput) //Used .find() in lieu of .forEach(). .find() iterates through the recipes to find and return the first recipe that matches that userInput.
+
+            if(perfectMatch) { // The result of the .find() was assigned to the perfectMatch variable. If perfectMatch exists, it will console.log the name of the meal and the ingredients.
+                console.log(perfectMatch.meal)
+                console.log(perfectMatch.ingredients)
+            } else {
+                console.log("Meal Not Found") //Should no meal be found, the console will log "Meal Not Found"
+            }
+        })
+        
+    }
+
+/*PREVIOUS SEACH FOR RECIPE(NON-FUNCTIONING)
+const userInput = document.querySelector("#search-input").value;
+const searchButton = document.querySelector("#search-button");
+
+searchButton.addEventListener('submit', lookUpRecipe)
+
+function lookUpRecipe(e){
+    e.preventDefault();
+    fetch('http://localhost:3000/recipes')
+        .then(res => res.json())
+        .then((data) => {
+            console.log(data);
+            data.forEach((recipe) => searchName(recipe))
+        })
+}
+
+function searchName(recipe){
+    if(recipe.meal === userInput){    
+        console.log(recipe)
+    }
+}
+*/
 
 //---------------SHOPPING LIST SECTION------------------------------------
 
@@ -155,7 +199,6 @@ function renderShopList(buyMe){
     deleteButton.addEventListener('mouseout', (event) => {
         event.target.style.backgroundColor = '';
     }); 
-    deleteButton.addEventListener('click', deleteItem);
 
     deleteButton.addEventListener('click', () => {
         newItem.remove();
@@ -178,7 +221,7 @@ function deleteItem(id){
 }
 
 //Add Misc. Items to Shopping List
-addItemButton = document.querySelector('#submit-item')
+const addItemButton = document.querySelector('#submit-item')
 
 addItemButton.addEventListener('click', addItem);
 
